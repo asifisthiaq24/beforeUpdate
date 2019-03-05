@@ -1,0 +1,4 @@
+appId: my.App.Id
+publish:
+    provider: github
+    token: $$a153e53d35bd5df441c4ffd1b741e1bb10739ce7$$

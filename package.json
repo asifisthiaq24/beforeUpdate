@@ -1,0 +1,33 @@
+{
+  "name": "form2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular-svg-round-progressbar": "^2.0.0",
+    "angular2-navigate-with-data": "^1.1.11",
+    "bcrypt": "^3.0.4",
+    "electron": "^1.4.16",
+    "electron-rebuild": "^1.8.4",
+    "electron-updater": "^4.0.6",
+    "knex": "^0.16.3",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "asar": "^1.0.0",
+    "debug-menu": "^0.6.1",
+    "electron-builder": "^20.38.5",
+    "electron-packager": "^13.1.0",
+    "electron-rebuild": "^1.8.4"
+  },
+  "repository": "https://github.com/asifisthiaq24/beforeUpdate",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rebuild": "electron-rebuild -f -w sqlite3",
+    "start": "electron .",
+    "build": "build --win",
+    "ship": "build --win -p always"
+  },
+  "author": "",
+  "license": "ISC"
+}

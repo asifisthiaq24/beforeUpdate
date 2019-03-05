@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <!--Importing Js Files -->
+        <script src="./js/app.js"> </script>
+    <!-- End -->
+<!--
+
+</head>
+
+<body ng-app="myApp" ng-controller="appCtrl">
+
+    <center><h1><strong>{{msg}}</strong></h1></center>
+
+</body>
+
+</html>
+
+-->
+
+<html>
+
+<head>
+    <title>Electron AutoUpdater</title>
+</head>
+
+<body ng-app="myApp" ng-controller="appCtrl">
+
+    <center><h1><strong>{{msg}}</strong></h1></center>
+    
+    <script>
+        const ipcRenderer = require('electron').ipcRenderer;
+        // wait for an updateReady message
+        ipcRenderer.on('updateReady', function(event, text) {
+            // changes the text of the button
+            var container = document.getElementById('ready');
+            container.innerHTML = "new version ready!";
+        })
+    </script>
+    Version: <span id="version">v0.1.9</span>
+    <!-- the button onClick sends a quitAndInstall message to the electron main process -->
+    <button id="ready" onClick="ipcRenderer.send('quitAndInstall')">no updates ready</button>
+
+</body>
+
+</html>
